@@ -63,13 +63,14 @@ class Field_soundcloud {
         if (!$input)
             return null;
         $data = json_decode($input);
-        return $data->html;
+        return html_entity_decode($data->html);
     }
     
     public function pre_output_plugin($input, $params) {
         if (!$input)
             return null;
         $data = json_decode($input);
+        $data->html = html_entity_decode($data->html);
         return (array) $data;
     }
 
