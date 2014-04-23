@@ -85,7 +85,7 @@ class Field_soundcloud {
      * @return void
      */
     public function event() {
-        $this->CI->type->add_js('soundcloud', 'soundcloud.js');
+        if($this->CI->uri->segment(1) == 'admin') $this->CI->type->add_js('soundcloud', 'soundcloud.js');
     }
 
 }
