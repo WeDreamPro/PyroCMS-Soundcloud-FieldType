@@ -35,7 +35,7 @@ class Field_soundcloud {
             'id' => $params['form_slug'],
             'data-fieldtype' => 'soundcloud',
             'value' => !empty($soundcloud_info->url) ? $soundcloud_info->url : null,
-            'placeholder' => lang('streams:video_url.input_placeholder')
+            'placeholder' => lang('streams:soundcloud.input_placeholder')
         );
 
         $input_hidden_options = array(
